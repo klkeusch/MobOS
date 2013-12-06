@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Obd:</b>
+  <%= @error.obd_id %>
+</p>
+
+<p>
+  <b>Obd content:</b>
+  <%= @error.obd_content %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @error.brand_id %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @error.model_id %>
+</p>
+
+<p>
+  <b>Construction year:</b>
+  <%= @error.construction_year %>
+</p>
+
+
+<%= link_to 'Edit', edit_error_path(@error) %> |
+<%= link_to 'Back', errors_path %>

@@ -1,0 +1,31 @@
+<h1>Listing errors</h1>
+
+<table>
+  <tr>
+    <th>Obd</th>
+    <th>Obd content</th>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Construction year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @errors.each do |error| %>
+  <tr>
+    <td><%= error.obd_id %></td>
+    <td><%= error.obd_content %></td>
+    <td><%= error.brand_id %></td>
+    <td><%= error.model_id %></td>
+    <td><%= error.construction_year %></td>
+    <td><%= link_to 'Show', error %></td>
+    <td><%= link_to 'Edit', edit_error_path(error) %></td>
+    <td><%= link_to 'Destroy', error, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Error', new_error_path %>

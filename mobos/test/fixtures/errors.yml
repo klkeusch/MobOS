@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  obd_id: 1
+  obd_content: MyText
+  brand_id: 1
+  model_id: 1
+  construction_year: 1
+
+two:
+  obd_id: 1
+  obd_content: MyText
+  brand_id: 1
+  model_id: 1
+  construction_year: 1
