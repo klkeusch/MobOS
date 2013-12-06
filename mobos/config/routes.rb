@@ -1,4 +1,7 @@
 Mobos::Application.routes.draw do
+  resources :brands
+
+
   resources :errors
 
 
