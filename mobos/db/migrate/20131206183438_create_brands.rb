@@ -2,7 +2,7 @@ class CreateBrands < ActiveRecord::Migration
   def change
     create_table :brands do |t|
       t.string :name
-      t.name :country
+      t.string :country
 
       t.timestamps
     end

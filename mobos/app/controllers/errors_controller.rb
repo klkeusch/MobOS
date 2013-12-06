@@ -25,7 +25,7 @@ class ErrorsController < ApplicationController
   # GET /errors/new.json
   def new
     @error = Error.new
-
+    @brands = Brand.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @error }
