@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131206183438) do
+ActiveRecord::Schema.define(:version => 20131206201316) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20131206183438) do
   end
 
   create_table "errors", :force => true do |t|
-    t.integer  "obd_id"
+    t.string   "obd_id"
     t.text     "obd_content"
     t.integer  "brand_id"
     t.integer  "model_id"

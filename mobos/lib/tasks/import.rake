@@ -38,7 +38,7 @@ puts "Datei eingelesen"
     oo = Roo::Excel.new("Fehlercodes_Ford.xls")
     oo.default_sheet = oo.sheets.first
     1.upto(oo.last_row) do |line|
-        obd_id          = oo.cell(line,'A')
+        obd_id          = oo.cell(line,'A').to_i.to_s
         obd_content     = oo.cell(line,'B')
         brand           = oo.cell(line,'C')
      
@@ -52,4 +52,6 @@ puts "Datei eingelesen"
     end
 
 puts "Datei eingelesen"
+end
+
 end

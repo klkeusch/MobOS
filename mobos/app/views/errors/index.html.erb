@@ -1,11 +1,10 @@
 <h1>Listing errors</h1>
-
+Fehler insgesamt: <%= @errors.count%>
 <table>
   <tr>
-    <th>Obd</th>
-    <th>Obd content</th>
-    <th>Brand</th>
-    <th>Model</th>
+    <th>OBD-Fehlercode</th>
+    <th>OBD-Inhalt</th>
+    <th>Modell</th>
     <th>Baujahr</th>
     <th>Marke</th>
     <th></th>
@@ -17,13 +16,16 @@
   <tr>
     <td><%= error.obd_id %></td>
     <td><%= error.obd_content %></td>
-    <td><%= error.brand_id %></td>
     <td><%= error.model_id %></td>
     <td><%= error.construction_year %></td>
     <td><%= error.brand.name %></td>
-    <td><%= link_to 'Show', error %></td>
-    <td><%= link_to 'Edit', edit_error_path(error) %></td>
-    <td><%= link_to 'Destroy', error, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= link_to 'Show', error %></td>
+    <td><%#= image_tag 'show.png', :size => "50x50" %></td>
+    <td><%= link_to (image_tag  'show.png', :size => "50x50"), error %></td>
+    <td><%= link_to (image_tag  'edit.png', :size => "50x50"), edit_error_path(error) %></td>
+    <td><%= link_to (image_tag  'destroy.png', :size => "50x50"), error, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= link_to 'Edit', edit_error_path(error) %></td>
+    <td><%#= link_to 'Destroy', error, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
