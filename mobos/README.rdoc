@@ -1,1 +1,1 @@
-Web-based car environment to ensure optimal car expirience.
+Web-based car environment to ensure optimal car experience.
